@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+  <title>Criar conta | Cuidar+</title>
+</head>
+<body>
+  <main class="auth-pagina">
+    <section class="auth-cartao">
+      <a class="logo" href="index.html"><span class="logo-icone"><i class="fa-solid fa-heart-pulse"></i></span><span>Cuidar<span>+</span></span></a>
+      <h1>Crie sua conta</h1>
+      <p class="auth-subtitulo">Leva menos de um minuto.</p>
+
+      <form class="auth-form" id="formCadastro" novalidate>
+        <div class="alerta alerta-erro" id="erro" role="alert" hidden></div>
+        <div class="campo">
+          <label class="rotulo" for="nome">Nome completo</label>
+          <input class="controle" id="nome" name="nome" type="text" placeholder="Digite seu nome" autocomplete="name" required>
+        </div>
+        <div class="campo">
+          <label class="rotulo" for="cpf">CPF</label>
+          <input class="controle" id="cpf" name="cpf" type="text" inputmode="numeric" placeholder="000.000.000-00" maxlength="14" autocomplete="off" required>
+        </div>
+        <div class="campo">
+          <label class="rotulo" for="email">E-mail</label>
+          <input class="controle" id="email" name="email" type="email" placeholder="seu@email.com" autocomplete="email" required>
+        </div>
+        <div class="campo">
+          <label class="rotulo" for="perfil">Eu sou</label>
+          <select class="controle" id="perfil" name="perfil" required>
+            <option value="cuidador">Cuidador(a) - registro a rotina do idoso</option>
+            <option value="familiar">Familiar - acompanho o idoso</option>
+          </select>
+          <span class="ajuda">Familiar: use o mesmo e-mail que o cuidador autorizou para ter acesso ao idoso.</span>
+        </div>
+        <div class="campo">
+          <label class="rotulo" for="senha">Senha</label>
+          <div class="campo-senha">
+            <input class="controle" id="senha" name="senha" type="password" placeholder="Mínimo de 8 caracteres" autocomplete="new-password" required>
+            <button type="button" data-mostrar-senha="senha" aria-label="Mostrar senha"><i class="fa-solid fa-eye"></i></button>
+          </div>
+        </div>
+        <div class="campo">
+          <label class="rotulo" for="confirmarSenha">Confirmar senha</label>
+          <input class="controle" id="confirmarSenha" name="confirmarSenha" type="password" placeholder="Repita a senha" autocomplete="new-password" required>
+        </div>
+        <button class="btn btn-primario btn-bloco" id="botaoCadastrar" type="submit">Criar conta</button>
+      </form>
+      <p class="auth-rodape">Já tem conta? <a href="login.html">Entrar</a></p>
+    </section>
+  </main>
+  <script type="module" src="js/pages/cadastro.js"></script>
+</body>
+</html>

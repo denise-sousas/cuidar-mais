@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+  <title>Rotina | Cuidar+</title>
+</head>
+<body>
+  <main id="pagina" hidden>
+    <header class="pagina-cabecalho">
+      <div><h1>Rotina do dia</h1><p>Cuidados, medicamentos e consultas em ordem de horário.</p></div>
+      <div class="acoes" id="acoes"></div>
+    </header>
+    <div class="linha-flex" style="margin-bottom:18px">
+      <div class="navegador-data">
+        <button class="btn-icone" id="dataAnterior" aria-label="Dia anterior"><i class="fa-solid fa-chevron-left"></i></button>
+        <input type="date" id="campoData" aria-label="Escolher data">
+        <button class="btn-icone" id="dataProxima" aria-label="Próximo dia"><i class="fa-solid fa-chevron-right"></i></button>
+        <button class="btn btn-claro btn-pequeno" id="dataHoje">Hoje</button>
+      </div>
+      <strong class="data-extenso" id="dataExtenso"></strong>
+      <span class="linha-flex" id="resumo"></span>
+    </div>
+    <section class="lista" id="lista"></section>
+  </main>
+  <script type="module" src="js/pages/rotina.js"></script>
+</body>
+</html>

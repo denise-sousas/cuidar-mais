@@ -1,0 +1,85 @@
+/* =====================================================================
+   Cuidar+ | base.css
+   Variáveis de design (cores, espaços), reset e tipografia.
+   ===================================================================== */
+:root {
+  --cor-primaria: #164f75;
+  --cor-primaria-escura: #0f3a58;
+  --cor-primaria-clara: #e8f1f8;
+  --cor-destaque: #38b2a6;
+  --cor-texto: #18324b;
+  --cor-texto-suave: #5f7386;
+  --cor-fundo: #f5f9fd;
+  --cor-superficie: #ffffff;
+  --cor-borda: #dde7f0;
+  --cor-sucesso: #2f9e60;
+  --cor-sucesso-clara: #e6f5ec;
+  --cor-alerta: #b87400;
+  --cor-alerta-clara: #fff4de;
+  --cor-perigo: #d9534f;
+  --cor-perigo-clara: #fcebea;
+
+  --raio: 14px;
+  --raio-pequeno: 10px;
+  --sombra: 0 4px 18px rgba(24, 50, 75, 0.08);
+  --largura-menu: 260px;
+  --altura-topo: 68px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1 { font-size: 1.7rem; line-height: 1.2; }
+h2 { font-size: 1.25rem; }
+h3 { font-size: 1.05rem; }
+
+[hidden] { display: none !important; }
+
+:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 2px;
+}
+
+.texto-suave { color: var(--cor-texto-suave); }
+.texto-pequeno { font-size: 0.85rem; }
+.so-leitor { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }

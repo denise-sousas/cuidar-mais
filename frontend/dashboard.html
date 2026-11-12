@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+  <title>Dashboard | Cuidar+</title>
+</head>
+<body>
+  <main id="pagina" hidden>
+    <header class="pagina-cabecalho">
+      <div><h1>Olá, <span id="nomeUsuario"></span>! 👋</h1><p id="subtitulo">Veja como está a rotina de hoje.</p></div>
+      <div class="acoes" id="acoes"></div>
+    </header>
+    <div id="alertaIdoso" style="margin-bottom:18px"></div>
+    <section class="cartao" id="registroRapido" hidden style="margin-bottom:20px">
+      <div class="cartao-cabecalho"><div><h2>Registro rápido</h2><p>Anote o que acabou de acontecer em poucos toques.</p></div></div>
+      <div class="registro-rapido">
+        <button class="btn btn-claro" data-rapido="agua"><i class="fa-solid fa-glass-water"></i>Água +200 ml</button>
+        <button class="btn btn-claro" data-rapido="alimentacao"><i class="fa-solid fa-utensils"></i>Alimentação</button>
+        <button class="btn btn-claro" data-rapido="higiene"><i class="fa-solid fa-soap"></i>Higiene / banho</button>
+        <button class="btn btn-claro" data-rapido="medicacao"><i class="fa-solid fa-pills"></i>Medicação dada</button>
+        <button class="btn btn-claro" data-rapido="ocorrencia"><i class="fa-solid fa-note-sticky"></i>Ocorrência</button>
+      </div>
+    </section>
+    <section class="grade-stats" id="estatisticas"></section>
+    <section class="cartao">
+      <div class="cartao-cabecalho"><h2>Progresso de hoje</h2><span class="badge" id="textoProgresso"></span></div>
+      <div class="progresso" role="progressbar" aria-label="Progresso do dia"><div id="barraProgresso" style="width:0"></div></div>
+    </section>
+    <div class="grade-2 espaco-topo">
+      <section class="cartao">
+        <div class="cartao-cabecalho"><h2>Próximos itens pendentes</h2><a class="link-acao" href="rotina.html">Ver rotina</a></div>
+        <div class="lista" id="pendentes"></div>
+      </section>
+      <section class="cartao">
+        <div class="cartao-cabecalho"><h2>Últimas observações</h2><a class="link-acao" href="observacoes.html">Ver todas</a></div>
+        <div class="lista" id="observacoes"></div>
+      </section>
+    </div>
+  </main>
+  <script type="module" src="js/pages/dashboard.js"></script>
+</body>
+</html>

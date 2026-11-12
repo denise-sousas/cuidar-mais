@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+  <title>Administração | Cuidar+</title>
+</head>
+<body>
+  <main id="pagina" hidden>
+    <header class="pagina-cabecalho">
+      <div><h1>Usuários e permissões</h1><p>Gerencie perfis e contas do sistema.</p></div>
+      <div class="acoes"><button class="btn btn-primario" id="botaoNovo"><i class="fa-solid fa-user-plus"></i> Novo usuário</button></div>
+    </header>
+    <section class="grade-stats" id="estatisticas"></section>
+    <section class="cartao">
+      <div class="filtros">
+        <div class="campo"><label class="rotulo" for="busca">Buscar por nome, e-mail ou CPF</label><input class="controle" id="busca" type="search" placeholder="Digite para buscar"></div>
+      </div>
+      <div id="usuarios"></div>
+    </section>
+  </main>
+  <script type="module" src="js/pages/admin.js"></script>
+</body>
+</html>

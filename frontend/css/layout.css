@@ -1,0 +1,203 @@
+/* =====================================================================
+   Cuidar+ | layout.css
+   Estrutura das páginas: página inicial, login/cadastro e o "shell"
+   do aplicativo (menu lateral + barra superior + conteúdo).
+   ===================================================================== */
+
+/* ---------- Página inicial ---------- */
+.home {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  background: linear-gradient(130deg, #f3f8fc 0%, #fff 58%, #e8f5f0 100%);
+}
+.home-conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 22px;
+  width: min(100%, 1040px);
+  margin: 0 auto;
+  padding: 48px clamp(24px, 6vw, 88px);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+.logo span { color: var(--cor-destaque); }
+.logo-icone {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-destaque));
+}
+.home-etiqueta {
+  align-self: flex-start;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cor-primaria);
+  background: var(--cor-primaria-clara);
+}
+.home h2 { font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.1; }
+.home h2 strong { color: var(--cor-primaria); }
+.home-descricao { max-width: 520px; font-size: 1.1rem; color: var(--cor-texto-suave); }
+.home-botoes { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* ---------- Login e cadastro ---------- */
+.auth-pagina {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: linear-gradient(160deg, var(--cor-primaria-clara), var(--cor-fundo) 60%);
+}
+.auth-cartao {
+  width: min(100%, 440px);
+  padding: 36px 32px;
+  background: var(--cor-superficie);
+  border-radius: 20px;
+  box-shadow: var(--sombra);
+}
+.auth-cartao .logo { justify-content: center; margin-bottom: 18px; }
+.auth-cartao h1 { text-align: center; margin-bottom: 6px; }
+.auth-subtitulo { text-align: center; margin-bottom: 24px; color: var(--cor-texto-suave); }
+.auth-rodape { margin-top: 20px; text-align: center; font-size: 0.95rem; color: var(--cor-texto-suave); }
+.auth-rodape a { font-weight: 600; }
+.auth-form { display: grid; gap: 16px; }
+.campo-senha { position: relative; }
+.campo-senha .controle { padding-right: 48px; }
+.campo-senha button {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--cor-texto-suave);
+}
+
+/* ---------- Aplicativo (menu + conteúdo) ---------- */
+.app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: var(--largura-menu) 1fr;
+}
+.menu {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 20px 14px;
+  overflow-y: auto;
+  color: #fff;
+  background: linear-gradient(180deg, #164f75, #0d3047);
+}
+.menu .logo { padding: 4px 10px 18px; font-size: 1.4rem; }
+.menu-titulo {
+  margin: 14px 10px 4px;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 12px;
+  border-radius: var(--raio-pequeno);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.86);
+}
+.menu-link i { width: 20px; text-align: center; }
+.menu-link:hover { background: rgba(255, 255, 255, 0.1); }
+.menu-link.ativo { color: #fff; background: rgba(56, 178, 166, 0.3); }
+.menu-rodape { margin-top: auto; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.15); }
+.menu-usuario { display: flex; align-items: center; gap: 12px; padding: 8px 10px 12px; }
+.menu-usuario small { display: block; color: rgba(255, 255, 255, 0.65); }
+.avatar {
+  width: 40px;
+  height: 40px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-weight: 700;
+  color: var(--cor-primaria-escura);
+  background: var(--cor-destaque);
+}
+.menu-botao {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  text-align: left;
+}
+
+.principal { min-width: 0; display: flex; flex-direction: column; }
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  height: var(--altura-topo);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 28px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--cor-borda);
+}
+.topo-esquerda, .topo-direita { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.botao-menu { display: none; }
+.conteudo { flex: 1; width: 100%; max-width: 1180px; margin: 0 auto; padding: 28px; }
+
+.pagina-cabecalho {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.pagina-cabecalho p { margin-top: 4px; color: var(--cor-texto-suave); }
+.acoes { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.grade-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.grade-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 20px; }
+
+/* ---------- Telas pequenas ---------- */
+@media (max-width: 900px) {
+  .home { grid-template-columns: 1fr; }
+  .home-conteudo { padding-top: 44px; padding-bottom: 44px; }
+  .app { grid-template-columns: 1fr; }
+  .menu {
+    position: fixed;
+    z-index: 40;
+    width: min(var(--largura-menu), 85vw);
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+  }
+  .menu.aberto { transform: none; box-shadow: 0 0 0 100vmax rgba(10, 25, 40, 0.45); }
+  .botao-menu { display: grid; }
+  .topo { padding: 0 16px; }
+  .conteudo { padding: 18px 14px; }
+}
+@media (max-width: 480px) {
+  .auth-cartao { padding: 28px 20px; }
+  .grade-2 { grid-template-columns: 1fr; }
+}

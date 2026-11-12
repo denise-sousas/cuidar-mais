@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+  <title>Observações | Cuidar+</title>
+</head>
+<body>
+  <main id="pagina" hidden>
+    <header class="pagina-cabecalho">
+      <div><h1>Observações e ocorrências</h1><p>Anote situações diferentes que aconteceram na rotina.</p></div>
+      <div class="acoes" id="acoes"></div>
+    </header>
+    <div class="filtros">
+      <div class="campo"><label class="rotulo" for="filtroCategoria">Categoria</label><select class="controle" id="filtroCategoria"></select></div>
+    </div>
+    <section class="lista" id="lista"></section>
+  </main>
+  <script type="module" src="js/pages/observacoes.js"></script>
+</body>
+</html>
